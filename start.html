@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <meta http-equiv="refresh" content="2"> -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%; 
+  height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+.playClass{
+            /* position: absolute; */
+            /* background-image: url('./start.png'); */
+            width:50px;
+            height:50px;
+            /* top: 30px;
+            left:50px; */
+        }
+
+.cursive{
+    font-family: 'Righteous', cursive;
+}
+
+.clickme {
+    background-color: #EEEEEE;
+    padding: 8px 20px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
+    color: #10a2ff;
+    cursor:pointer;
+}
+
+.go {
+    /* background-color:#FF0040; */
+    background-color: #54E346;
+    color: #FFFFFF;
+}
+
+.go:hover {
+    background-color:#EB003B;
+    color: #FFFFFF;
+}
+</style>
+</head>
+<body>
+
+<img id="myVideo" src="home.png">
+  
+<audio controls autoplay>   
+    <source src="./mixkit-comical-2.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<div class="content">
+    <!-- <span><img src="./load.gif" height="150px"/></span> -->
+    <div style="float:left">
+        <h1 class="cursive animate__animated animate__heartBeat animate__infinite	infinite"> GARBAGE GOBBLERS </h1>
+
+  
+        <p class="cursive">Let's go on a MIssion to wipe the city Clean..Are you ready???</p>
+        
+        <!-- <input type="image" class="playClass" name="Name of image button" src="./power.png"  alt="text" onclick="alert('hi')"> -->
+
+      
+        <button id="my-element" class="clickme go" onclick=" READY()">I AM READY</button>
+
+    </div>
+    <div style="float:right">
+        <img src="./cleanboy.png" width="200px" height="200px"/>
+    </div>
+
+    
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+
+const element = document.querySelector('#my-element');
+
+element.classList.add('animate__animated', 'animate__flash', 'animate__infinite', 'infinite');
+function READY(){
+   window.location=("instruction.html")
+ }
+</script>
+
+
+</body>
+</html>
